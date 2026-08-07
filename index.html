@@ -24,7 +24,7 @@
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
         .ad-box {
-            margin: 15px auto;
+            margin: 20px auto;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -37,46 +37,180 @@
         <h1>Google Search Console Verification</h1>
         <p>This page is used for domain verification.</p>
 
-        <!-- 광고 100개가 출력되는 영역 -->
-        <div id="ad-wrapper"></div>
-    </div>
+        <!-- 광고 유닛 1 (배너) -->
+        <div class="ad-box">
+            <script>
+              atOptions = {
+                'key' : 'e32e5fbd16c9341d4e49ed20ef64e7c7',
+                'format' : 'iframe',
+                'height' : 60,
+                'width' : 468,
+                'params' : {}
+              };
+            </script>
+            <script src="https://www.highperformanceformat.com/e32e5fbd16c9341d4e49ed20ef64e7c7/invoke.js"></script>
+        </div>
 
-    <!-- 광고 100개(배너 50개 + 네이티브 50개) 동적 생성 스크립트 -->
-    <script>
-        const wrapper = document.getElementById('ad-wrapper');
-        
-        for (let i = 1; i <= 50; i++) {
-            // 1. 배너 광고 유닛 생성
-            const box1 = document.createElement('div');
-            box1.className = 'ad-box';
-            
-            const script1_1 = document.createElement('script');
-            script1_1.text = `atOptions = {'key':'e32e5fbd16c9341d4e49ed20ef64e7c7','format':'iframe','height':60,'width':468,'params':{}};`;
-            
-            const script1_2 = document.createElement('script');
-            script1_2.src = 'https://www.highperformanceformat.com/e32e5fbd16c9341d4e49ed20ef64e7c7/invoke.js';
-            
-            box1.appendChild(script1_1);
-            box1.appendChild(script1_2);
-            wrapper.appendChild(box1);
+        <!-- 광고 유닛 2 (네이티브) -->
+        <div class="ad-box">
+            <script async="async" data-cfasync="false" src="https://pl30718554.effectivecpmnetwork.com/7857d684feb24931f72c06ff0040db33/invoke.js"></script>
+            <div id="container-7857d684feb24931f72c06ff0040db33"></div>
+        </div>
 
-            // 2. 네이티브 광고 유닛 생성
-            const box2 = document.createElement('div');
-            box2.className = 'ad-box';
-            
-            const script2 = document.createElement('script');
-            script2.async = true;
-            script2.dataset.cfasync = "false";
-            script2.src = 'https://pl30718554.effectivecpmnetwork.com/7857d684feb24931f72c06ff0040db33/invoke.js';
-            
-            const containerDiv = document.createElement('div');
-            containerDiv.id = 'container-7857d684feb24931f72c06ff0040db33';
-            
-            box2.appendChild(script2);
-            box2.appendChild(containerDiv);
-            wrapper.appendChild(box2);
+        <!-- 광고 유닛 3 (배너) -->
+        <div class="ad-box">
+            <script>
+              atOptions = {
+                'key' : 'e32e5fbd16c9341d4e49ed20ef64e7c7',
+                'format' : 'iframe',
+                'height' : 60,
+                'width' : 468,
+                'params' : {}
+              };
+            </script>
+            <script src="https://www.highperformanceformat.com/e32e5fbd16c9341d4e49ed20ef64e7c7/invoke.js"></script>
+        </div>
+
+        <!-- 광고 유닛 4 (네이티브) -->
+        <div class="ad-box">
+            <script async="async" data-cfasync="false" src="https://pl30718554.effectivecpmnetwork.com/7857d684feb24931f72c06ff0040db33/invoke.js"></script>
+            <div id="container-7857d684feb24931f72c06ff0040db33"></div>
+        </div>
+
+        <!-- 광고 유닛 5 (배너) -->
+        <div class="ad-box">
+            <script>
+              atOptions = {
+                'key' : 'e32e5fbd16c9341d4e49ed20ef64e7c7',
+                'format' : 'iframe',
+                'height' : 60,
+                'width' : 468,
+                'params' : {}
+              };
+            </script>
+            <script src="https://www.highperformanceformat.com/e32e5fbd16c9341d4e49ed20ef64e7c7/invoke.js"></script>
+        </div>
+
+        <!-- 광고 유닛 6 (네이티브) -->
+        <div class="ad-box">
+            <script async="async" data-cfasync="false" src="https://pl30718554.effectivecpmnetwork.com/7857d684feb24931f72c06ff0040db33/invoke.js"></script>
+            <div id="container-7857d684feb24931f72c06ff0040db33"></div>
+        </div>
+
+        <!-- 광고 유닛 7 (배너) -->
+        <div class="ad-box">
+            <script>
+              atOptions = {
+                'key' : 'e32e5fbd16c9341d4e49ed20ef64e7c7',
+                'format' : 'iframe',
+                'height' : 60,
+                'width' : 468,
+                'params' : {}
+              };
+            </script>
+            <script src="https://www.highperformanceformat.com/e32e5fbd16c9341d4e49ed20ef64e7c7/invoke.js"></script>
+        </div>
+
+        <!-- 광고 유닛 8 (네이티브) -->
+        <div class="ad-box">
+            <script async="async" data-cfasync="false" src="https://pl30718554.effectivecpmnetwork.com/7857d684feb24931f72c06ff0040db33/invoke.js"></script>
+            <div id="container-7857d684feb24931f72c06ff0040db33"></div>
+        </div>
+
+        <!-- 광고 유닛 9 (배너) -->
+        <div class="ad-box">
+            <script>
+              atOptions = {
+                'key' : 'e32e5fbd16c9341d4e49ed20ef64e7c7',
+                'format' : 'iframe',
+                'height' : 60,
+                'width' : 468,
+                'params' : {}
+              };
+            </script>
+            <script src="https://www.highperformanceformat.com/e32e5fbd16c9341d4e49ed20ef64e7c7/invoke.js"></script>
+        </div>
+
+        <!-- 광고 유닛 10 (네이티브) -->
+        <div class="ad-box">
+            <script async="async" data-cfasync="false" src="https://pl30718554.effectivecpmnetwork.com/7857동일한 광고 스크립트 코드 블록을 HTML에 반복해서 나열할 때 개수 제한이나 동작 오류가 발생하는 이유와 해결 방법입니다.
+
+---
+
+### 원인
+1. **전역 변수(`atOptions`) 충돌**: 배너 광고 스크립트는 `atOptions`라는 동일한 전역 변수를 공유하므로, 한 페이지에 여러 번 작성하면 나중에 선언된 설정값이 이전 설정을 덮어쓰게 됩니다.
+2. **동일한 `id` 중복**: 네이티브 광고 컨테이너 태그인 `<div id="container-7857d684feb24931f72c06ff0040db33"></div>`의 `id` 값이 중복되면, 브라우저는 가장 먼저 만나는 첫 번째 요소에만 광고를 출력합니다.
+3. **`iframe` 격리 필요성**: 동일 네트워크의 광고를 한 페이지에 여러 개 노출하려면 각 광고를 독립된 `iframe`으로 격리해야 변수 및 DOM `id` 충돌 없이 각각 정상 로드됩니다.
+
+---
+
+### 해결 방법: `iframe` 격리 방식 HTML
+
+아래와 같이 `srcdoc` 속성을 활용해 각 광고 유닛을 독립된 `iframe` 환경으로 감싸면 충돌 없이 다수의 광고를 정상적으로 노출시킬 수 있습니다.
+
+```html
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="htGRl-F5QkKiXlIIoXft4Uaf-y1nVhOtp3x-o7T_S2U" />
+    <title>Google Search Console Verification Page</title>
+    <!-- 글로벌 광고 스크립트 -->
+    <script src="[https://pl30718555.effectivecpmnetwork.com/34/1b/4d/341b4d4ea61e3ab61ec2091e8a6969d2.js](https://pl30718555.effectivecpmnetwork.com/34/1b/4d/341b4d4ea61e3ab61ec2091e8a6969d2.js)"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
         }
-    </script>
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .ad-frame {
+            width: 100%;
+            height: 90px;
+            border: none;
+            margin: 10px 0;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Google Search Console Verification</h1>
+        <p>This page is used for domain verification.</p>
+
+        <!-- 배너 광고 유닛 (iframe 격리) -->
+        <iframe class="ad-frame" srcdoc="
+            <style>body{margin:0;display:flex;justify-content:center;align-items:center;}</style>
+            <script>
+                atOptions = {
+                    'key' : 'e32e5fbd16c9341d4e49ed20ef64e7c7',
+                    'format' : 'iframe',
+                    'height' : 60,
+                    'width' : 468,
+                    'params' : {}
+                };
+            </script>
+            <script src='[https://www.highperformanceformat.com/e32e5fbd16c9341d4e49ed20ef64e7c7/invoke.js](https://www.highperformanceformat.com/e32e5fbd16c9341d4e49ed20ef64e7c7/invoke.js)'></script>
+        "></iframe>
+
+        <!-- 네이티브 광고 유닛 (iframe 격리) -->
+        <iframe class="ad-frame" srcdoc="
+            <style>body{margin:0;display:flex;justify-content:center;align-items:center;}</style>
+            <script async='async' data-cfasync='false' src='[https://pl30718554.effectivecpmnetwork.com/7857d684feb24931f72c06ff0040db33/invoke.js](https://pl30718554.effectivecpmnetwork.com/7857d684feb24931f72c06ff0040db33/invoke.js)'></script>
+            <div id='container-7857d684feb24931f72c06ff0040db33'></div>
+        "></iframe>
+    </div>
 </body>
 </html>
 <!-- trigger build -->
+
