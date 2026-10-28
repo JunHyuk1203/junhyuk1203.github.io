@@ -10,7 +10,8 @@ async function inspect(file){
   const html=await fs.readFile(file,'utf8');
   for(const [name,re] of [['title',/<title>.+?<\/title>/],['description',/<meta name="description" content="[^"]+"/],['canonical',/<link rel="canonical"/],['main',/<main id="main">/],['lang',/<html lang="ko">/]]) if(!re.test(html))errors.push(`${file}: missing ${name}`);
   if((html.match(/<h1\b/g)||[]).length!==1)errors.push(`${file}: expected one h1`);
-  if(!config.adsense.enabled && /<script[^>]+pagead2\.googlesyndication\.com/.test(html))errors.push(`${file}: unexpected ad script`);
+  const adScripts=[...html.matchAll(/<script async src="https:\/\/pagead2\.googlesyndication\.com\/pagead\/js\/adsbygoogle\.js\?client=([^"]+)" crossorigin="anonymous"><\/script>/g)];
+  if(adScripts.length!==1 || adScripts[0][1]!==config.adsense.publisher)errors.push(`${file}: expected one AdSense script with the configured publisher`);
   for(const match of html.matchAll(/(?:href|src)="(\/[^"#]*)(#[^"]+)?"/g)){
     links++;const ref=match[1];const target=path.join(root,ref,ref.endsWith('/')?'index.html':'');
     try{await fs.access(target);}catch{errors.push(`${file}: broken local link ${ref}`);}
@@ -23,4 +24,4 @@ await walk(root);
 const sitemap=await fs.readFile(path.join(root,'sitemap.xml'),'utf8');
 if(!sitemap.includes(config.origin))errors.push('Sitemap origin mismatch');
 if((await fs.readFile(path.join(root,'CNAME'),'utf8')).trim()!==new URL(config.origin).hostname)errors.push('CNAME mismatch');
-if(errors.length){console.error(errors.join('\n'));process.exitCode=1;}else console.log(`PASS: ${pages} HTML documents, ${links} internal links/assets, headings, fragments, metadata, sitemap and inactive ads.`);
+if(errors.length){console.error(errors.join('\n'));process.exitCode=1;}else console.log(`PASS: ${pages} HTML documents, ${links} internal links/assets, headings, fragments, metadata, sitemap and AdSense script.`);
